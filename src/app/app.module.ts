@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { VMCreateComponent } from './vm/vm-create/vm-create.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { VMCreateComponent } from './vm/vm-create/vm-create.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
