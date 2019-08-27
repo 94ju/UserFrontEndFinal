@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
+import { VMCreateComponent } from './vm/vm-create/vm-create.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VMCreateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

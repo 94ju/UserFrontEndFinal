@@ -1,0 +1,12 @@
+<h1>VM create component</h1>
+<!-- property binding -->
+<!-- <textarea name="" id="" cols="30" rows="10" [value]='newPost'></textarea>   -->
+<!-- Two way Binding  -->
+<textarea name="" id="" cols="30" rows="10" [(ngModel)]='createNew'></textarea>  
+<hr>
+<!-- eventBinding -->
+<button (click)="onClick()">
+    ADD VM
+</button>
+<!-- stringInterpoletion -->
+<p>{{ newPost }}</p>
