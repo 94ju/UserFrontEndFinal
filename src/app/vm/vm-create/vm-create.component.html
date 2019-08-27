@@ -4,10 +4,10 @@
 <!-- Two way Binding  -->
 <mat-card>
     <mat-form-field>
-        <input matInput type="text">
+        <input matInput type="text" [(ngModel)]='enteredVMtype'>
     </mat-form-field>
     <mat-form-field>
-        <textarea matInput name="" id="" cols="30" rows="10" [(ngModel)]='createNew'></textarea> 
+        <textarea matInput name="" id="" cols="30" rows="10" [(ngModel)]='enteredVM_Memmory'></textarea> 
     </mat-form-field>
     <button 
     mat-raised-button 
@@ -16,6 +16,7 @@
         Add VM
     </button>
 </mat-card>
+
 
  
 

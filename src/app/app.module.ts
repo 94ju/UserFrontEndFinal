@@ -13,6 +13,7 @@ import { VMCreateComponent } from './vm/vm-create/vm-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { VmListComponent } from './vm/vm-list/vm-list.component';
+import { VMservice } from './vm.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { VmListComponent } from './vm/vm-list/vm-list.component';
     MatToolbarModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [VMservice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

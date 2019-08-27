@@ -1,14 +1,23 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
+import { VMservice } from 'src/app/vm.service';
+import { throwMatDialogContentAlreadyAttachedError } from '@angular/material';
 @Component({
     selector:'app-vm-create',
     templateUrl:'./vm-create.component.html',
     styleUrls:['./vm-create.component.css']
 })
-export class VMCreateComponent{
-    createNew=""
-    newPost = "No Content"
+export class VMCreateComponent implements OnInit{
+    enteredVMtype=""
+    enteredVM_Memmory=""
+    constructor(private vmService:VMservice){}
+
     onClick(){
-       this.newPost=this.createNew;
+        this.vmService.addVms(this.enteredVMtype,this.enteredVM_Memmory);
     }
+    ngOnInit(){
+         
+    }
+
+    
 
 }
