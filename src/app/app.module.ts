@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 import { VMCreateComponent } from './vm/vm-create/vm-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { VmListComponent } from './vm/vm-list/vm-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VMCreateComponent,
-    HeaderComponent
+    HeaderComponent,
+    VmListComponent
   ],
   imports: [
     BrowserModule,
