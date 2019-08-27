@@ -1,7 +1,8 @@
 import {Component} from "@angular/core";
 @Component({
     selector:'app-vm-create',
-    templateUrl:'./vm-create.component.html'
+    templateUrl:'./vm-create.component.html',
+    styleUrls:['./vm-create.component.css']
 })
 export class VMCreateComponent{
     createNew=""

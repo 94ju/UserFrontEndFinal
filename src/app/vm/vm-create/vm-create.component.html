@@ -1,12 +1,22 @@
-<h1>VM create component</h1>
+
 <!-- property binding -->
 <!-- <textarea name="" id="" cols="30" rows="10" [value]='newPost'></textarea>   -->
 <!-- Two way Binding  -->
-<textarea name="" id="" cols="30" rows="10" [(ngModel)]='createNew'></textarea>  
+<mat-card>
+    <mat-form-field>
+        <textarea matInput name="" id="" cols="30" rows="10" [(ngModel)]='createNew'></textarea> 
+    </mat-form-field>
+    <button 
+    mat-raised-button 
+    color="primary"
+    (click)="onClick()">
+        Add VM
+    </button>
+</mat-card>
+
+ 
 <hr>
 <!-- eventBinding -->
-<button (click)="onClick()">
-    ADD VM
-</button>
+
 <!-- stringInterpoletion -->
 <p>{{ newPost }}</p>
