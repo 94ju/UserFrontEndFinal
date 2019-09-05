@@ -17,6 +17,7 @@ export class VMCreateComponent implements OnInit{
             return; 
         }
         this.vmService.addVms(form.value.type,form.value.memory);
+        form.resetForm();
     }
     ngOnInit(){
          
