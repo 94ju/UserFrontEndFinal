@@ -3,18 +3,39 @@
 <!-- <textarea name="" id="" cols="30" rows="10" [value]='newPost'></textarea>   -->
 <!-- Two way Binding  -->
 <mat-card>
-    <mat-form-field>
-        <input matInput type="text" [(ngModel)]='enteredVMtype'>
-    </mat-form-field>
-    <mat-form-field>
-        <textarea matInput name="" id="" cols="30" rows="10" [(ngModel)]='enteredVM_Memmory'></textarea> 
-    </mat-form-field>
-    <button 
-    mat-raised-button 
-    color="primary"
-    (click)="onClick()">
-        Add VM
-    </button>
+    <form (submit)="onAddVM(vmPost)" #vmPost=ngForm>
+                <mat-form-field>
+                    <input  
+                        matInput
+                        type="text" 
+                        name="type"
+                        ngModel
+                        required
+                    >
+                    <mat-error *ngIf="!vmPost.valid">
+                            Please enter a valid VM type
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input 
+                        matInput
+                        name="memory"
+                        ngModel
+                        required
+                     >
+                     <mat-error *ngIf="!vmPost.valid">
+                            Please enter a valid Memory for the VM
+                    </mat-error>
+                </mat-form-field>
+                <button 
+                    mat-raised-button 
+                    color="primary"
+                    type="submit"
+                >
+                    Add VM
+                </button>
+    </form>
+   
 </mat-card>
 
 

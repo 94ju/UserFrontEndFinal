@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VMservice } from 'src/app/vm.service';
+import {VM} from '../vm.model'
 
 @Component({
   selector: 'app-vm-list',
